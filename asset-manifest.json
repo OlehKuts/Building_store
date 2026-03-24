@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Building_store/static/css/main.5c5eb591.css",
+    "main.js": "/Building_store/static/js/main.aac12dd9.js",
+    "index.html": "/Building_store/index.html",
+    "main.5c5eb591.css.map": "/Building_store/static/css/main.5c5eb591.css.map",
+    "main.aac12dd9.js.map": "/Building_store/static/js/main.aac12dd9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c5eb591.css",
+    "static/js/main.aac12dd9.js"
+  ]
+}
