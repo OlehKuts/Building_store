@@ -14,6 +14,8 @@ import RebuyForm from "./RebuyForm";
 import { nanoid } from "@reduxjs/toolkit";
 import { ChangeDescBox } from "./ChangeDescBox";
 import InfoCard from "./InfoCard";
+import { selectArticleById } from "../store/articleSlice";
+import { useSelector } from "react-redux";
 
 export const ArticleItem = ({
   article,
@@ -27,6 +29,7 @@ export const ArticleItem = ({
   onAddOrder,
   onAddExpense,
   displayAlert,
+  changeCurrentArticle,
 }) => {
   const {
     id,
@@ -50,6 +53,7 @@ export const ArticleItem = ({
   const [newImgUrl, setNewImgUrl] = useState(imgUrl);
   const [newPrice, setNewPrice] = useState(price);
   const [orderAmount, setOrderAmount] = useState("");
+  const selectedArticle = useSelector((state) => selectArticleById(state, id));
   const sendNewOrder = () => {
     const newOrder = {
       orderId: nanoid(),
@@ -230,7 +234,10 @@ export const ArticleItem = ({
         <Card.Footer className="btnFooter">
           <Button
             variant="outline-primary"
-            onClick={() => setShowRebuyModal(true)}
+            onClick={() => {
+              setShowRebuyModal(true);
+              changeCurrentArticle(selectedArticle);
+            }}
           >
             Докупити
           </Button>

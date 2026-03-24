@@ -13,14 +13,16 @@ import {
   selectFilteredArticles,
   setSearchTerm,
   selectSearchTerm,
+  selectArticleById,
 } from "../store/articleSlice";
 import OrderForm from "./OrderForm";
+import { useEffect, useState } from "react";
 
 const ArticleList = ({ onAddExpense, onAddIncome, displayAlert }) => {
   const dispatch = useDispatch();
   const filteredArticles = useSelector(selectFilteredArticles);
   const searchTerm = useSelector(selectSearchTerm);
-
+  const [currentArticle, setCurrentArticle] = useState(null);
   const handleSearchChange = (e) => {
     dispatch(setSearchTerm(e.target.value));
   };
@@ -63,7 +65,8 @@ const ArticleList = ({ onAddExpense, onAddIncome, displayAlert }) => {
     );
   };
   const onRebuyArticle = (articleChanges) => {
-    const { amount, purchasePrice, price, articleId } = articleChanges;
+    const { amount, purchasePrice, price, articleId, amountForRebuy } =
+      articleChanges;
     dispatch(
       rebuyArticle({
         id: articleId,
@@ -71,7 +74,8 @@ const ArticleList = ({ onAddExpense, onAddIncome, displayAlert }) => {
           price,
           purchasePrice,
           amount,
-          articleExpense: purchasePrice * amount,
+          articleExpense:
+            currentArticle.articleExpense + purchasePrice * amountForRebuy,
         },
       }),
     );
@@ -102,6 +106,9 @@ const ArticleList = ({ onAddExpense, onAddIncome, displayAlert }) => {
     );
     dispatch(applyIncome(updates));
   };
+  useEffect(() => {
+    console.log(currentArticle);
+  }, [currentArticle]);
   return (
     <div className="mainContainer">
       <div className="articleListContainer">
@@ -135,6 +142,9 @@ const ArticleList = ({ onAddExpense, onAddIncome, displayAlert }) => {
                 onAddOrder={onAddOrder}
                 onAddExpense={onAddExpense}
                 displayAlert={displayAlert}
+                changeCurrentArticle={(selectedArticle) => {
+                  setCurrentArticle(selectedArticle);
+                }}
               />
             ))}
           </div>

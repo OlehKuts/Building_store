@@ -1,13 +1,11 @@
 import ListGroup from "react-bootstrap/ListGroup";
 import { Trash } from "react-bootstrap-icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { removeExpense } from "../store/expenseSlice";
 import {
   cancelExpenseTransaction,
-  selectAllArticles,
-  // selectArticleWithId,
+  selectArticleById,
 } from "../store/articleSlice";
-import { store } from "../store/store";
 
 export const ExpenseItem = ({ expense, displayAlert }) => {
   const {
@@ -20,11 +18,10 @@ export const ExpenseItem = ({ expense, displayAlert }) => {
     expenseSum,
   } = expense;
   const dispatch = useDispatch();
-  const neededArticle = selectAllArticles(store.getState()).find(
-    (item) => item.id === articleId,
-  ); // instead so far the selectById created selector
-  // const articleById = useSelector(selectArticleWithId("pJaQLoh7sh2adJOEEzVR3"));
-
+  const articleById = useSelector((state) =>
+    selectArticleById(state, articleId),
+  );
+  console.log(expense);
   return (
     <ListGroup.Item
       variant={expenseType === "rebuy" ? "warning" : "primary"}
@@ -47,11 +44,13 @@ export const ExpenseItem = ({ expense, displayAlert }) => {
               cancelExpenseTransaction({
                 id: articleId,
                 changes: {
-                  articleExpense: neededArticle.articleExpense - expenseSum,
+                  articleExpense: articleById.articleExpense - expenseSum,
+                  amount: articleById.amount - expenseArticleAmount,
                 },
               }),
             );
             displayAlert("Видалено закупку товару!", "info");
+            console.log(articleById);
           }}
           title={"Відмінити закупку товару"}
           style={{ marginLeft: "10px", cursor: "pointer" }}

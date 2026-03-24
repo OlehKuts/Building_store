@@ -41,6 +41,7 @@ const RebuyForm = ({
               ...values,
               amount: amount + values.amount,
               articleId: id,
+              amountForRebuy: values.amount,
             };
             const newExpense = {
               articleId: id,

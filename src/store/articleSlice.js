@@ -54,7 +54,7 @@ const articleSlice = createSlice({
   },
 });
 
-export const { selectAll: selectAllArticles, selectById } =
+export const { selectAll: selectAllArticles, selectById: selectArticleById } =
   articlesAdapter.getSelectors((state) => state.articles);
 export const getAllArticles = (state) => state.articles;
 export const selectSearchTerm = (state) => state.articles.searchTerm;
