@@ -1,0 +1,300 @@
+/* body {
+  font-family: "Roboto";
+} */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.invokedAlert {
+  position: fixed;
+  top: 60px;
+  right: 30px;
+}
+
+.articleImage {
+  height: 160px;
+  cursor: pointer;
+}
+.articleCard {
+  height: 395px;
+  width: 340px;
+  border: 1px solid dimgray;
+  margin: 10px auto;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.superForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 6px;
+}
+.superForm {
+  margin-top: 10px;
+  border: 1px solid dimgray;
+  box-shadow: 0 0 2px 2px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+}
+.superForm input[type="number"] {
+  width: 70px;
+  margin-top: 5px;
+}
+.formPricesDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 10px;
+}
+.formPricesDiv div {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 30px;
+  align-items: center;
+  text-align: center;
+}
+.rebuyForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.errorMsg {
+  color: red;
+}
+.errorMsg {
+  color: red;
+}
+.superForm textarea,
+input[type="text"],
+select {
+  width: 90%;
+  text-align: center;
+}
+.paymentTypeSelect {
+  height: 40px;
+}
+.rebuyForm input {
+  text-align: center;
+  width: 100px;
+  height: 30px;
+}
+.orderItemAmount {
+  text-align: center;
+  width: 60px;
+  height: 36px;
+  margin-right: 8px;
+  padding-bottom: 5px;
+}
+.rebuyFormPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  row-gap: 8px;
+}
+hr {
+  color: dimgray;
+  width: 80%;
+  margin: 10px auto;
+}
+.filtersLine button {
+  margin: 5px;
+}
+.descriptionArea,
+.articlePriceLine {
+  cursor: pointer;
+}
+.cardHeader {
+  font-size: larger;
+  font-weight: bold;
+  cursor: pointer;
+  height: 65px;
+}
+.btnFooter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.btnFooter button {
+  margin: 5px;
+}
+.superFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+.purchaseFormContainer {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 10px;
+}
+
+.articleListContainer {
+  /* flex: 7; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0px 5px;
+}
+.articleList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+.writeOffCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.modalBtnsLine {
+  display: flex;
+  justify-content: space-around;
+}
+.mainContainer {
+  display: flex;
+  /* margin-bottom: "20px";
+  padding-bottom: "20px";
+  border: 1px solid green; */
+}
+.orderFormDiv {
+  /* flex: 3; */
+  width: 340px;
+  border: 1px solid navy;
+  margin: 5px;
+  box-shadow: 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+.orderCard {
+  width: 300px;
+  margin-bottom: 5px;
+}
+.postOrder {
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: 63% 25% 12%;
+}
+.incomeCard {
+  width: 650px;
+  margin: 5px auto;
+}
+.orderHeader {
+  position: relative;
+  margin-right: 4px;
+}
+.trashOrder {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  cursor: pointer;
+}
+.trashArticle {
+  position: absolute;
+  top: 14px;
+  right: 8px;
+  cursor: pointer;
+}
+.cashOrCardIcon {
+  position: absolute;
+  bottom: 2px;
+  right: 15px;
+}
+.starArticle {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+.articlePriceLine {
+  position: relative;
+}
+.expenseItem {
+  width: 660px;
+  position: relative;
+}
+.active {
+  font-weight: bold;
+}
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.settings label {
+  font-weight: 620;
+}
+.superForm label {
+  font-weight: bold;
+}
+.settings div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.orderPriceAmountLine {
+  display: flex;
+  justify-content: space-between;
+}
+.searchInput {
+  width: 400px;
+  margin: 5px auto;
+}
+.articleCardInput {
+  width: 96%;
+  margin-top: 5px;
+}
+#noArticles {
+  margin: 20px auto;
+  font-size: 24px;
+}
+.transactionHeader {
+  margin: 5px auto;
+  text-align: center;
+}
+.appFooter {
+  position: fixed;
+  bottom: 0;
+}
+.totalDailySum {
+  color: palevioletred;
+  margin: 10px auto auto 10px;
+}
+.statistic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.financialExponents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid forestgreen;
+  padding: 15px;
+  margin: 10px;
+}
+.reports {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  padding: 15px;
+  margin: 10px;
+}
+.accordItemHeader {
+  width: 150px;
+  margin: 5px 100px 5px 50px;
+}
+#expenseMonthes,
+#incomeMonthes,
+#financialYears {
+  width: 200px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
