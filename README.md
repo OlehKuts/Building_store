@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+# 🏗️ Building Store Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A specialized SPA (Single Page Application) designed to digitize inventory and sales tracking for a small building materials store.
 
-## Available Scripts
+### 🔗 [Переглянути Live Demo](https://olehkuts.github.io/Building_store/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📸 Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![Expenses report](./screenshots/MonthlyExpensesScreenshot.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 💡 Inspiration
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project was born from a real-life need. A friend running a construction store tracked everything manually in a notebook. This app replaces paper records with a digital system, allowing for efficient tracking of stock levels, purchase costs, and sales revenue in one place.
 
-### `npm run build`
+## 🚀 Key Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **📦 Inventory Management:** Full product list with search, edit, restock, and write-off functions.
+- **📈 Profitability Tracking:** Visual indicators showing product profitability based on cost vs. revenue.
+- **🛒 Sales & Orders:** Process sales directly from the dashboard with cash/card payment options.
+- **📋 Data Persistence:** All data is automatically saved to **Local Storage**, ensuring it persists even after browser refreshes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📄 PDF Reporting & Exports
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The application features a robust reporting system using `@react-pdf/renderer`. Users can generate and download the following documents:
 
-### `npm run eject`
+- 📉 **Monthly Expense Reports:** Detailed logs of stock purchases.
+- 💰 **Monthly Income Reports:** Summary of all sales and customer transactions.
+- 📅 **Annual Summary:** A high-level overview of yearly financial performance.
+- 📦 **Complete Product Catalog:** A full list of all items currently in the system.
+- ⚠️ **Out-of-Stock Catalog:** A specialized list of products that need restocking.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🛠️ Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Core:** React.js (Router v6)
+- **State Management:** **Redux Toolkit**
+- **UI & Styling:** React Bootstrap & Bootstrap Icons
+- **Forms:** Formik & Yup
+- **Reporting:** @react-pdf/renderer & ag-media/react-pdf-table
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💻 Getting Started
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Run the app:**
+   ```bash
+   npm start
+   ```
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_Note: Since this is a client-side SPA, all data is stored locally in your browser's Local Storage._

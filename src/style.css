@@ -161,9 +161,6 @@ hr {
 }
 .mainContainer {
   display: flex;
-  /* margin-bottom: "20px";
-  padding-bottom: "20px";
-  border: 1px solid green; */
 }
 .orderFormDiv {
   /* flex: 3; */

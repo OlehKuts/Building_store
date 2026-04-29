@@ -106,9 +106,6 @@ const ArticleList = ({ onAddExpense, onAddIncome, displayAlert }) => {
     );
     dispatch(applyIncome(updates));
   };
-  useEffect(() => {
-    console.log(currentArticle);
-  }, [currentArticle]);
   return (
     <div className="mainContainer">
       <div className="articleListContainer">

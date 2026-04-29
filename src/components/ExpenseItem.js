@@ -21,7 +21,6 @@ export const ExpenseItem = ({ expense, displayAlert }) => {
   const articleById = useSelector((state) =>
     selectArticleById(state, articleId),
   );
-  console.log(expense);
   return (
     <ListGroup.Item
       variant={expenseType === "rebuy" ? "warning" : "primary"}
@@ -50,7 +49,6 @@ export const ExpenseItem = ({ expense, displayAlert }) => {
               }),
             );
             displayAlert("Видалено закупку товару!", "info");
-            console.log(articleById);
           }}
           title={"Відмінити закупку товару"}
           style={{ marginLeft: "10px", cursor: "pointer" }}
