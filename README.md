@@ -8,7 +8,7 @@ A specialized SPA (Single Page Application) designed to digitize inventory and s
 
 ## 📸 Screenshots
 
-![Expenses report](./screenshots/MonthlyExpensesScreenshot.png)
+![Expenses report](./src/screenshots/MonthlyExpensesScreenshot.png)
 
 ---
 
